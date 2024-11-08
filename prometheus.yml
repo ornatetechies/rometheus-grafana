@@ -7,8 +7,8 @@ scrape_configs:
   - job_name: 'authorization-server'
     metrics_path: '/api/actuator/prometheus'
     static_configs:
-      - targets: ['authorization:8080'] # Update the port and host as necessary
-  - job_name: 'income-expense'
+      - targets: ['authorization-server:8080'] # Update the port and host as necessary
+  - job_name: 'incomeexpense'
     metrics_path: '/api/actuator/prometheus'
     static_configs:
       - targets: ['incomeexpense:8082'] # Update the port and host as necessary
